@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "66954088527",
+    "firebase_url": "https://doctor-smarty.firebaseio.com",
+    "project_id": "doctor-smarty",
+    "storage_bucket": "doctor-smarty.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66954088527:android:5a51f3edd71eaa6ad55a3a",
+        "android_client_info": {
+          "package_name": "com.example.doctor_client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66954088527-tg6jkhdlb0ts5jcinljfoss592uv2iig.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.doctor_client",
+            "certificate_hash": "186727c438e8de93dd4dbc9fd5a215a77af853f2"
+          }
+        },
+        {
+          "client_id": "66954088527-9oli5771kdpe94f98iq7388l7vujj8ft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKTkouVrSLHYPkYLNliKy6iHPGOGvK5fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66954088527-9oli5771kdpe94f98iq7388l7vujj8ft.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
