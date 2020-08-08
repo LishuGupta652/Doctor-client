@@ -64,4 +64,28 @@ class FirebaseMethods {
     });
     return await _auth.signOut();
   }
+
+  Future<FirebaseUser> createUserWithEmailAndPassword(
+      String email, String password) async {
+    FirebaseUser user = (await _auth.createUserWithEmailAndPassword(
+            email: email, password: password))
+        .user;
+    return user;
+  }
+
+  Future<void> addDataFromEmailRegistration(FirebaseUser currentUser) async {
+    String username = Utils.getUserName(currentUser.email);
+
+    user = User(
+        uid: currentUser.uid,
+        email: currentUser.email,
+        name: currentUser.displayName,
+        profilePhoto: currentUser.photoUrl,
+        username: username);
+
+    firestore
+        .collection('users')
+        .document(currentUser.uid)
+        .setData(user.toMap(user));
+  }
 }

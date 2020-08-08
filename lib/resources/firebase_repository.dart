@@ -15,4 +15,12 @@ class FirebaseRepository {
       _firebaseMethods.addDataToDb(user);
 
   Future<void> signOut() => _firebaseMethods.signOut();
+
+  Future<FirebaseUser> createUserWithEmailAndPassword(
+          String email, String password) =>
+      _firebaseMethods.createUserWithEmailAndPassword(email, password);
+
+      
+  Future<void> addDataFromEmailRegistration(FirebaseUser user) =>
+      _firebaseMethods.addDataFromEmailRegistration(user);
 }

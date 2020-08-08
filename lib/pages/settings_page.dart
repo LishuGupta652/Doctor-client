@@ -1,3 +1,5 @@
+import 'package:doctor_client/pages/authDesign/loginPage.dart';
+import 'package:doctor_client/resources/firebase_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 
@@ -9,7 +11,7 @@ class SettingPage extends StatelessWidget {
     FlutterStatusbarcolor.setStatusBarColor(Color(0xffff7675));
     return Container(
       width: double.infinity,
-      padding: EdgeInsets.only(left: 50, right: 30),
+      padding: EdgeInsets.only(left: 20, right: 20),
       child: ListView(
         children: <Widget>[
           Container(
@@ -22,9 +24,31 @@ class SettingPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         SizedBox(
-                          height: 30,
+                          height: 10,
                         ),
-                        Text("UserDetails", style: TextStyle(fontSize: 30))
+                        Text("UserDetails", style: TextStyle(fontSize: 30)),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        Center(
+                          child: FlatButton(
+                            color: Colors.green,
+                            onPressed: () {
+                              FirebaseRepository repository =
+                                  FirebaseRepository();
+                              repository.signOut();
+                              Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          LoginPage()));
+                            },
+                            child: Text(
+                              "Sign Out",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        )
                       ],
                     )
                   ],
